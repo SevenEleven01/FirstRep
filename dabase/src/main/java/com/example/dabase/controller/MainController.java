@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -39,7 +40,7 @@ public class MainController {
         return "main";
     }
 
-    @PostMapping("filter")
+    @PostMapping("/filter")
     public String filter(@RequestParam String filter, @RequestParam String tag, Map<String, Object> model) {
         Iterable<Message> messages;
         if (filter !=null && !filter.isEmpty()) {
