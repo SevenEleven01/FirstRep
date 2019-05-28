@@ -41,7 +41,7 @@ public class MainController {
     }
 
     @PostMapping("/filter")
-    public String filter(@RequestParam String filter, @RequestParam String tag, Map<String, Object> model) {
+    public String filter(@RequestParam String filter, Map<String, Object> model) {
         Iterable<Message> messages;
         if (filter !=null && !filter.isEmpty()) {
             messages = messageRepo.findByTag(filter);
