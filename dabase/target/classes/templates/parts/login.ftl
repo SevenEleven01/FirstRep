@@ -55,8 +55,8 @@
                 </#if>
             </div>
         </div>
-        <div class="col-sm-6">
-            <div class="g-recaptcha" data-sitekey="6LdHCqgUAAAAAFLLFitEtYHIkG96mXhxbI-bzin7"></div>
+        <div class="sm-6">  <!--col-sm-6-->
+            <div class="g-recaptcha mb-3" data-sitekey="6LdHCqgUAAAAAFLLFitEtYHIkG96mXhxbI-bzin7"></div>
             <#if captchaError??>
                 <div class="alert alert-danger" role="alert">
                     ${captchaError}
